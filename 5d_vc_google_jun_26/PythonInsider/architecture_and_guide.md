@@ -3,11 +3,11 @@ This web application fetches, parses, and formats core Python development releas
 
 
 ## 📂 Project Structure
-All files are located in the user's workspace at: `C:/Users/Aumii/Desktop/Antigravity/agy-cli-projects`
-- [app.py](file:///C:/Users/Aumii/Desktop/Antigravity/agy-cli-projects/app.py): The Flask web server. Handles caching, fetches the Python Insider RSS XML feed (`https://blog.python.org/rss.xml`), parses dates using standard library utilities, and exposes the JSON endpoints.
-- [templates/index.html](file:///C:/Users/Aumii/Desktop/Antigravity/agy-cli-projects/templates/index.html): The core HTML structure styled dynamically with custom Python gradients, dynamic category containers, and loading states.
-- [static/style.css](file:///C:/Users/Aumii/Desktop/Antigravity/agy-cli-projects/static/style.css): Custom stylesheet providing dark glassmorphism layout, Python brand color gradients, color-coded badges, custom scrollbars, and a floating selection drawer.
-- [static/script.js](file:///C:/Users/Aumii/Desktop/Antigravity/agy-cli-projects/static/script.js): Handles client-side API requests, dynamic category filter pill generation, real-time debounced searching, multi-select drawers, and custom tweet formatters.
+All files are located in the user's workspace at: `C:\Users\username\folder\PythonInsider`
+- app.py: The Flask web server. Handles caching, fetches the Python Insider RSS XML feed (`https://blog.python.org/rss.xml`), parses dates using standard library utilities, and exposes the JSON endpoints.
+- templates/index.html: The core HTML structure styled dynamically with custom Python gradients, dynamic category containers, and loading states.
+- static/style.css: Custom stylesheet providing dark glassmorphism layout, Python brand color gradients, color-coded badges, custom scrollbars, and a floating selection drawer.
+- static/script.js: Handles client-side API requests, dynamic category filter pill generation, real-time debounced searching, multi-select drawers, and custom tweet formatters.
 
 
 ## 🛠️ Architecture & Core Mechanics
@@ -35,7 +35,7 @@ Instead of hardcoding categories on the frontend:
 ## 🚀 How to Run the Application
 The Flask development server is currently running in the background. If you need to restart or run it manually:
 ### 1. Activate the Virtual Environment
-Open a terminal in the project directory (`C:\Users\Aumii\Desktop\Antigravity\agy-cli-projects`) and run:
+Open a terminal in the project directory (`C:\Users\username\folder\PythonInsider`) and run:
 ```powershell
 .\.venv\Scripts\Activate.ps1
 ```
@@ -49,7 +49,6 @@ python app.py
 ### 3. Open in Browser
 Navigate to:
 - Local URL: **[http://127.0.0.1:5000](http://127.0.0.1:5000)**
-- LAN IP: **[http://192.168.1.7:5000](http://192.168.1.7:5000)**
 
 
 ## 📊 Features & Aesthetics Preview

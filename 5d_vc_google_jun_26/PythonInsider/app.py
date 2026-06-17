@@ -90,9 +90,10 @@ def fetch_and_parse_notes():
         # Format: releases -> Releases
         category = category.capitalize()
         
-        # Construct content HTML
-        content_html = f'<h3 class="update-title" style="margin-top: 0; margin-bottom: 0.75rem; font-size: 1.15rem; color: #ffffff; font-weight: 700;">{title_text}</h3>'
-        content_html += f'<div class="update-description" style="color: #cbd5e1; font-size: 0.95rem;">{desc_html}</div>'
+        # Construct content HTML with hyperlink title wrapper
+        content_html = f'<h3 class="update-title" style="margin-top: 0; margin-bottom: 0.75rem; font-size: 1.15rem; font-weight: 700;">'
+        content_html += f'<a href="{link}" target="_blank" rel="noopener" style="color: inherit; text-decoration: none;">{title_text}</a></h3>'
+        content_html += f'<div class="update-description">{desc_html}</div>'
         
         # Construct clean text for text filtering and tweet sharing
         clean_desc = clean_html_tags(desc_html)

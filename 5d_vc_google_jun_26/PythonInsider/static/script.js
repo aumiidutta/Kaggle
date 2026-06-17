@@ -34,6 +34,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Setup Events
 function setupEventListeners() {
+    // Theme Toggle Handler
+    const themeToggleBtn = document.getElementById('theme-toggle-btn');
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            showToast(`Swapped to ${newTheme === 'light' ? 'Light' : 'Dark'} Mode`, 'info');
+        });
+    }
+
     // Search event with debounce
     let searchDebounceTimeout;
     searchInput.addEventListener('input', (e) => {
@@ -278,6 +290,14 @@ function renderNotes() {
                     ${note.content_html}
                 </div>
                 <div class="note-actions">
+                    <a href="${note.link}" class="btn-card-link" target="_blank" rel="noopener" title="Read the full article">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                            <polyline points="15 3 21 3 21 9"/>
+                            <line x1="10" y1="14" x2="21" y2="3"/>
+                        </svg>
+                        <span>Read Post</span>
+                    </a>
                     <button class="btn-card-tweet" title="Share this update on X">
                         <svg viewBox="0 0 24 24" fill="currentColor">
                             <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
