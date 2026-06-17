@@ -1,0 +1,6 @@
+{
+  "name": "EMOJICTIONARY",
+  "description": "A comprehensive emoji dictionary explaining the meanings of emojis. Browse by category, search by name or feeling, and get instant explanations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
