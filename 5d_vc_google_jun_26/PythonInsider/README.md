@@ -1,11 +1,8 @@
 # 🐍 Python Insider Release Tracker
-
 A sleek, responsive, and modern web application built using **Python Flask** and vanilla **HTML, JavaScript, and CSS**. It fetches, parses, and styles release updates and core news from the **Official Python Insider Blog RSS Feed**, providing users with powerful filtering, searching, and custom tweeting capabilities on X (Twitter).
 
----
 
 ## 🚀 Key Features
-
 * **Live RSS Parsing**: Scrapes and parses `https://blog.python.org/rss.xml` (using standard Python libraries `urllib` and `xml.etree.ElementTree`) into structured JSON items.
 * **Dynamic Category Filters**: Automatically detects unique category tags (e.g., `Releases`, `Security`, `Community`, `JIT`, `Performance`) present in the feed and generates filter pills on-the-fly.
 * **Instant Debounced Search**: Fast, client-side keyword searching across titles, dates, descriptions, and categories.
@@ -15,10 +12,8 @@ A sleek, responsive, and modern web application built using **Python Flask** and
 * **Intelligent Caching**: Implements a **5-minute memory cache** to prevent feed rate limits, coupled with a manual reload trigger (with spinner feedback) that forces a live fetch bypass.
 * **Premium Dark Mode Theme**: Features a custom dark glassmorphism layout, smooth scale transitions, color-coded badges, custom scrollbars, and pulsing skeleton loader states.
 
----
 
 ## 📂 Project Structure
-
 ```text
 agy-cli-projects/
 ├── .gitignore               # Excludes virtual env, caching, and IDE folders
@@ -32,10 +27,8 @@ agy-cli-projects/
     └── script.js            # Client-side routing, filtering, selection, and share logic
 ```
 
----
 
 ## 🛠️ Getting Started & Installation
-
 Follow these steps to run the application locally on your machine.
 
 ### Prerequisites
@@ -76,8 +69,3 @@ python app.py
 Open your browser and visit:
 * Local Address: **[http://127.0.0.1:5000](http://127.0.0.1:5000)**
 * Local Network Address: **[http://192.168.1.7:5000](http://192.168.1.7:5000)** (if accessible on your LAN)
-
----
-
-## 📄 License
-This project is open-source and available under the [MIT License](LICENSE).
